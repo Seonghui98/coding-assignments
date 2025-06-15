@@ -1,0 +1,21 @@
+<!-- click_counter.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    button { padding: 10px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <p>버튼 클릭 횟수: <span id="count">0</span></p>
+  <button onclick="increment()">Click me</button>
+
+  <script>
+    let count = 0;
+    function increment() {
+      count++;
+      document.getElementById("count").textContent = count;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# 입력한 숫자가 소수인지 판별하는 함수
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+
+# 사용자 입력 받아 판별
+num = int(input("숫자를 입력하세요: "))
+if is_prime(num):
+    print(f"{num}은(는) 소수입니다.")
+else:
+    print(f"{num}은(는) 소수가 아닙니다.")
