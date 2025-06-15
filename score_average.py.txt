@@ -1,0 +1,33 @@
+# 학생들의 점수를 입력받고 평균을 계산하는 프로그램
+# 작성자: Seonghui
+# 작성일: 2025-06-15
+
+# 1. 학생 수를 먼저 입력받는다
+num_students = int(input("학생 수를 입력하세요: "))
+
+# 2. 점수를 저장할 리스트를 준비한다
+scores = []
+
+# 3. 학생 수만큼 점수를 입력받는다
+for i in range(num_students):
+    score = int(input(f"{i + 1}번 학생의 점수 입력: "))
+    scores.append(score)  # 입력받은 점수를 리스트에 추가
+
+# 4. 평균을 계산한다
+total = sum(scores)         # 리스트에 있는 점수를 모두 더함
+average = total / num_students  # 총합을 학생 수로 나눠 평균 계산
+
+# 5. 결과 출력
+print("\n📊 결과 출력")
+print(f"총점: {total}")
+print(f"평균 점수: {average:.2f}")
+
+# 6. 평균에 따라 간단한 평가도 출력해본다
+if average >= 90:
+    print("평가: 우수")
+elif average >= 70:
+    print("평가: 보통")
+else:
+    print("평가: 노력 필요")
+
+# 프로그램 끝
